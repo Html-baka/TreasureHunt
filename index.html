@@ -43,7 +43,7 @@ $("#map").click((event) => {
    //
    $('#clicksLeft').text('You have ' + (maxClicks - clicks) + ' more tries' )
    // if click was close, congrats
-   if (distance < 14) {
+   if (distance < 19) {
       alert('Treasure was found! You made ' + clicks + ' clicks');
       window.location.reload();
    } else if (clicks > maxClicks) {
@@ -60,9 +60,9 @@ const getDistance = (event, target) => {
 
 // get hint for the distance
 const getDistanceHint = (distance) => {
-   if (distance < 10) {
+   if (distance < 25) {
       return "Hot as hell!";
-   } else if (distance < 30) {
+   } else if (distance < 35) {
       return "Very Hot!";
    } else if (distance < 70) {
       return "Hot!";
